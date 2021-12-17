@@ -2,8 +2,7 @@
 set -Eeuo pipefail
 
 #Install base packages
-apt install vim
-apt install sudo
+apt install -y vim sudo
 
 #Add user to sudo
 usermod -aG dhuscha sudo
