@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 
+echo "Start"
+
 #Install base packages
 apt install -y vim sudo
 
 #Add user to sudo
-/usr/sbin/usermod -aG dhuscha sudo
+/usr/sbin/usermod -aG sudo dhuscha
 
 #Get puppet cert
 cp ./puppet6-keyring.gpg /etc/apt/trusted.gpg.d/puppet6-keyring.gpg
@@ -15,3 +17,5 @@ echo "deb http://apt.puppetlabs.com $(lsb_release -a) puppet6" >> /etc/apt/sourc
 
 #Refresh apt
 apt update
+
+echo "Done"
