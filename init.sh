@@ -18,4 +18,10 @@ echo "deb http://apt.puppetlabs.com buster puppet6" > /etc/apt/sources.list.d/pu
 #Refresh apt
 apt update
 
+#Install puppet agent
+apt install -y puppet-agent
+
+#Setup puppet agent
+echo "[main]\ncertname=$(hostname).corp.thatitguy.net\nserver=puppet.thatitguy.net\nenvironment=production\nruninterval=30m" > /etc/puppetlabs/puppet/puppet.conf
+
 echo "Done"
