@@ -5,7 +5,7 @@ set -Eeuo pipefail
 apt install -y vim sudo
 
 #Add user to sudo
-usermod -aG dhuscha sudo
+/usr/sbin/usermod -aG dhuscha sudo
 
 #Get puppet cert
 cp ./puppet6-keyring.gpg /etc/apt/trusted.gpg.d/puppet6-keyring.gpg
