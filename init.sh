@@ -13,7 +13,7 @@ apt install -y vim sudo
 cp ./puppet6-keyring.gpg /etc/apt/trusted.gpg.d/puppet6-keyring.gpg
 
 #Get puppet apt list
-echo "deb http://apt.puppetlabs.com $(lsb_release -a) puppet6" >> /etc/apt/sources.list.d/puppet6.list
+echo "deb http://apt.puppetlabs.com buster puppet6" >> /etc/apt/sources.list.d/puppet6.list
 
 #Refresh apt
 apt update
