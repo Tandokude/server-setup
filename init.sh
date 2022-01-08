@@ -7,7 +7,7 @@ echo "Start"
 apt install -y vim sudo
 
 #Add user to sudo
-/usr/sbin/usermod -aG sudo dhuscha
+#/usr/sbin/usermod -aG sudo dhuscha
 
 #Get puppet cert
 cp ./puppet6-keyring.gpg /etc/apt/trusted.gpg.d/puppet6-keyring.gpg
